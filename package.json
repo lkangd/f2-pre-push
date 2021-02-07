@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "git f2 branch auto merge for yunke.",
   "main": "index.js",
+  "bin": {
+    "f2-pre-push": "bin/f2-pre-push"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
