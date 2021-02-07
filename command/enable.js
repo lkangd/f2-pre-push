@@ -1,11 +1,12 @@
 'use strict'
 const co = require('co')
-const prompt = require('co-prompt')
+const path = require('path')
 const chalk = require('chalk')
 const fs = require('fs')
-const path = require('path')
+const prompt = require('co-prompt')
+const { exec } = require('child_process')
 
-const targetPath = path.resolve(__dirname, '../.git/hooks/pre-push')
+const targetPath = path.resolve('./.git/hooks/pre-push')
 const targetContent = fs.readFileSync(path.resolve(__dirname, '../scripts/f2-auto-merge.sh'))
 
 module.exports = () => {
@@ -25,6 +26,16 @@ module.exports = () => {
         console.log('\n')
         process.exit()
       }
+
+      exec('chmod +x ./.git/hooks/pre-push', (err, stdout, stderr) => {
+        if (err) {
+          console.log(chalk.red(err))
+          console.log('\n')
+          process.exit()
+        }
+        console.log(`stdout: ${stdout}\n'`)
+        console.log(`stderr: ${stderr}`)
+      })
 
       console.log(chalk.green('Inject success! enjoy.\n'))
       process.exit()

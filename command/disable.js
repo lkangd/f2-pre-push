@@ -5,7 +5,7 @@ const chalk = require('chalk')
 const fs = require('fs')
 const path = require('path')
 
-const targetPath = path.resolve(__dirname, '../.git/hooks/pre-push')
+const targetPath = path.resolve('./.git/hooks/pre-push')
 
 module.exports = () => {
   co(function* () {
