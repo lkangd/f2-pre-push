@@ -4,8 +4,7 @@
   "description": "git f2 branch auto merge for yunke.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "chmod +x ./script/auto-merge.sh && sh ./script/auto-merge.sh"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,11 +18,9 @@
   },
   "homepage": "https://github.com/lkangd/f2-branch-auto-merge#readme",
   "dependencies": {
-    "husky": "^4.3.8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run run"
-    }
+    "chalk": "^4.1.0",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^7.0.0"
   }
 }
