@@ -1,7 +1,7 @@
 {
-  "name": "f2-branch-auto-merge",
+  "name": "f2-pre-push",
   "version": "1.0.0",
-  "description": "git f2 branch auto merge for yunke.",
+  "description": "f2 branch auto merge git pre-push hook for yunke.",
   "main": "index.js",
   "bin": {
     "f2-pre-push": "bin/f2-pre-push"
